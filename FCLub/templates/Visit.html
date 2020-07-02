@@ -1,0 +1,27 @@
+{% extends 'basics.html' %}
+
+
+    {% block style %}
+    <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Visit.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Visit  {% endblock %}
+{% block body %}
+    <div class = "intro">
+        <h1>Посещение клиента</h1>
+<div class = "container">
+    <img src = "{{ url_for('static',filename='imgs/Service.jpg') }}">
+    <form method="post">
+        <div class = "dws-input">
+        <input type = "text" name = "card" placeholder = "Номер карты клиента:">
+        </div>
+        <br />
+        <br />
+        <button class = "dws-submit2" type = "submit" name = "submit" value = "Report">Показать посещение</button>
+        <br />
+        <br />
+        <br />
+        <a class = "restore" href = "/director/{{username}}">Назад</a>
+    </form>
+</div>
+</div>    {% endblock %}

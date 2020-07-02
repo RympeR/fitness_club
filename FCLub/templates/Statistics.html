@@ -1,0 +1,27 @@
+{% extends 'basics.html' %}
+
+
+    {% block style %}
+    <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Stata.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Statistics    {% endblock %}
+{% block body %}
+    <div class = "intro">
+        <h1>Статистика</h1>
+<div class = "container">
+    <img src = "{{ url_for('static',filename='imgs/Statistics.jpg') }}">
+    <form method="post">
+        <div class = "dws-input">
+        <input type = "text" name = "date" placeholder = "Введите дату в формате yyyy-mm-dd:">
+        </div>
+        <br />
+        <br />
+        <button class = "dws-submit2" href = "" type = "submit" name = "submit" value = "Report">Статистика за месяц</button>
+        <br />
+        <br />
+        <br />
+        <a class = "restore" href = "director">Назад</a>
+    </form>
+</div>
+</div>    {% endblock %}

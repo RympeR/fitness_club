@@ -1,0 +1,79 @@
+h1{
+    font-size: 80px;
+    text-align: center;
+    font-family: 'mr_KindlyJasmineG', cursive;
+    font-weight: bold;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url("../imgs/FON_INTRO.png") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+a{
+    color: #fff;
+}
+a:hover{
+    text-decoration: none;
+}
+.container{
+    width: 450px;
+    height: 850px;
+    background-color: rgba(24, 33, 52, 0.8);
+    margin: 250px auto 0 auto;
+    text-align: center;
+    box-shadow: 0 -5px 0 red;
+    border-radius: 0 0 10px 10px;
+    margin-top: 80px;
+}
+.container img{
+    width: 120px;
+    height: 120px;
+    margin: -60px 0 30px 0;
+    border: 5px solid #1a394f;
+    border-radius: 50%;
+}
+input[type="text"], input[type="password"]{
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+.dws-submit2{
+    padding: 13px 30px;
+    margin: 10px 0 20px 0;
+    font-size: 40px;
+    color: #fff;
+    background-color: #2ca8c6;
+    border: none;
+    border-bottom: 4px solid #6ee9fd;
+    cursor: pointer;
+    font-family: 'mr_KindlyJasmineG', cursive;
+    text-decoration: none;
+}
+.dws-submit2:hover{
+    transition: all 0.5s;
+    background: #fff;
+    color: #2c536c;
+}
+.restore{
+    font-size: 40px;
+    text-decoration: none;
+    font-family: 'mr_KindlyJasmineG', cursive;
+}
+.restore:hover{
+    font-size: 35px;
+    color: red;
+}
+h1{
+  font-size: 60px;
+  text-align: center;
+  font-family: 'mr_KindlyJasmineG', cursive;
+  font-weight: bold;
+}

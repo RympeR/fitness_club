@@ -1,0 +1,57 @@
+{% extends 'basics.html' %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/Add_Staff.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+{% endblock %}
+{% block title %}
+Add Staff {% endblock %}
+{% block body %}
+<div class="intro">
+    <h1>Добавить сотрудника</h1>
+    <div class="container">
+        <img src="{{ url_for('static',filename='imgs/Add_Staff.jpg') }}">
+        <form action="" method="post">
+            <div class="dws-input">
+                <input type="text" required name="name_login" placeholder="Имя:">
+            </div>
+            <div class="dws-input">
+                <input type="text" required name="surname" placeholder="Фамилия:">
+            </div>
+            <div class="dws-input">
+                <input type="text" required name="patronomyc" placeholder="Отчество:">
+            </div>
+            <div class="dws-input">
+                <input type="text" required name="telephone" placeholder="Телефон:">
+            </div>
+            <div class="dws-input">
+                <select required name="position" id="">
+                    <option disabled selected value="Выберите должность:">Выберите должность:</option>
+                    <option value="Тренер">Тренер</option>
+                    <option value="Директор">Директор</option>
+                    <option value="Массажист">Массажист</option>
+                    <option value="Администратор фитнес клуба">Администратор фитнес клуба</option>
+                </select>
+                <!-- <input type="text" required name="position" placeholder="Должность сотрудника:">-->
+            </div>
+            <div class="dws-input">
+                <input type="text" required name="service" placeholder="Название услуги:">
+            </div>
+            <div class="dws-input">
+                <input type="text" required name="service_type" placeholder="Тип услуги:">
+            </div>
+            <div class="dws-input">
+                <input type="text" required name="login" placeholder="Логин:">
+            </div>
+            <div class="dws-input">
+                <input type="text" required name="password" placeholder="Пароль:">
+            </div>
+            <br />
+            <br />
+            <button class="dws-submit2" type="submit" name="submit" value="Log in">Добавить сотрудника</button>
+            <br />
+            <br />
+            <br />
+            <a class="restore" href="Director.html">Назад</a>
+        </form>
+    </div>
+</div>{% endblock %}

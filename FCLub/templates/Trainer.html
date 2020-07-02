@@ -1,0 +1,68 @@
+{% extends 'basics.html' %}
+
+    {% block style %}
+        <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Trainer.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Trainer    {% endblock %}
+{% block body %}
+                     <div class = "intro">
+                     <h1> Тренер </h1>
+                     </div>
+                                   <div class = "intro2">
+                                          <div class="section_header">
+                                                 <h3 class = "section_suptitle">Это ваша персональная страница. Хотите ли внести, какие то изменения?</h3>
+                                          </div>
+                                          <div class = "container">   
+                                                 
+                                          <img src = "{{ url_for('static',filename='imgs/Trainer.jpg') }}">
+                                          <form>
+                                              <div class = "dws-input">
+                                              <input type = "name" disabled name = "name" placeholder = {{ dirstaff.name_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "surname" disabled name = "surname" placeholder = {{ dirstaff.surname_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "patronomyc" disabled name = "patronomyc" placeholder = {{ dirstaff.patronomyc_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "telephone" disabled name = "telephone" placeholder = {{ dirstaff.mobile_telephone_staff }}>
+                                              </div>
+                                              <br />
+                                              <a class = "dws-submit" href = "/logout" type = "back" name = "back" value = "Back">Назад</a>
+                                          </form>
+                                          </div>
+                                          <div class = "container2"> 
+                                                 <div class="header_menu">
+                                                        <h4>Меню</h4>
+                                                 </div> 
+                                                 <form method="post">
+                                                     <div class = "dws-input2">
+                                                             <p>Расписание на эту неделю</p>
+                                                            <table class = "table" border = "2">
+                                                                   <tr>
+                                                                          <th class = "text">Вид</th>
+                                                                          <th class = "text">День</th>
+                                                                          <th class = "text">Начало</th>
+                                                                          <th class = "text">Конец</th>
+                                                                   </tr>
+
+                                                                    {% for row in data %}
+                                                                   <tr>
+                                                                          <td class = "size">{{row[1]}}</td>
+                                                                          <td class = "size">{{row[2]}}</td>
+                                                                          <td class = "size">{{row[3]}}</td>
+                                                                          <td class = "size">{{row[4]}}</td>
+                                                                   </tr>
+                                                                    {% endfor %}
+                                                            </table>
+
+                                                            <button class = "dws-submit3" alt = "" type = "submit">Расписание</button>
+
+                                                     </div>
+                                                 </form>
+                                             </div>
+                                   </div>
+
+      {% endblock %}

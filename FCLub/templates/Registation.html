@@ -1,0 +1,32 @@
+﻿{% extends 'basics.html' %}
+    {% block style %}
+    <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Registration2.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Вход{% endblock %}
+{% block body %}
+    <div class = "intro">
+        <h1>Вход</h1>
+<div class = "container">
+    <img src = "{{ url_for('static',filename='imgs/moya.jpg') }}">
+    <form action = "" method = "post">
+        <div class = "dws-input">
+        <input class = "reg" type = "text" name = "username" placeholder = "Введите логин">
+        </div>
+        <div class = "dws-input">
+        <input type = "password" name = "password" placeholder = "Введите пароль">
+        </div>
+        <br />
+        {% for msg in get_flashed_messages() %}
+            <div class="error_input">{{msg}}</div>
+            {% endfor %}
+        <button class = "dws-submit"  type = "submit" name = "submit" value = "Log in">Войти</button>
+        <br />
+        <br />
+        <br />
+
+        <a class = "restore" href = "/logout">Назад</a>
+    </form>
+</div>
+</div>
+    {% endblock %}

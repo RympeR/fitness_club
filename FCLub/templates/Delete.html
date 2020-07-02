@@ -1,0 +1,34 @@
+{% extends 'basics.html' %}
+
+
+    {% block style %}
+    <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Delete.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+ {% endblock %}
+{% block title %}Delete {% endblock %}
+{% block body %}
+    <div class = "intro">
+        <h1>Удаление</h1>
+<div class = "container">
+    <img src = "{{ url_for('static',filename='imgs/Add_Staff.jpg') }}">
+    <form method="post">
+        <div class = "dws-input">
+        <input type = "text" name = "name" placeholder = "Имя:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "surname" placeholder = "Фамилия:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "patronomyc" placeholder = "Отчество:">
+        </div>
+        <br />
+        <br />
+        <button class = "dws-submit2"  type = "submit" name = "submit" value = "Report">Удалить сотрудника</button>
+        <br />
+        <br />
+        <br />
+        <a class = "restore" href = "/director/{{username}}">Назад</a>
+    </form>
+</div>
+</div>
+ {% endblock %}

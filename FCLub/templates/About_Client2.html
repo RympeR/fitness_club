@@ -1,0 +1,34 @@
+{% extends 'basics.html' %}
+
+    {% block style %}
+        <link rel = "stylesheet" href = "{{ url_for('static',filename='css/About_Client2.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Trainer    {% endblock %}
+{% block body %}
+                         <h1>Получить данные о клиенте</h1>
+                                                            <table class = "table" border = "2">
+                                                                   <tr>
+                                                                          <th class = "text">Услуги</th>
+                                                                          <th class = "text">Дата начала</th>
+                                                                          <th class = "text">Дата окончания</th>
+                                                                   </tr>
+                                                                   {% for m in dirstaff %}
+                                                                       <tr>
+                                                                              <th class = "text">{{m[0]}}</th>
+                                                                              <th class = "text">{{m[1]}}</th>
+                                                                              <th class = "text">{{m[2]}}</th>
+                                                                       </tr>
+                                                                   {% endfor %}
+                                                            </table>
+                                                            <br />
+                                                            <br />
+                                                            <a class = "restore" href = "/admin/{{username}}">Назад</a>
+                                                            <!--<button class = "dws-submit3" alt = "" type = "submit">Расписание на следующую неделю</button>-->
+                                                     <!--<a class = "dws-submit2" href = "file:///C:/Users/Owner/Desktop/Курсовая%20Малахов/Training.html" type = "Money" name = "Money" value = "Money">Training</a>
+                                                     </div>
+                                                     <div class = "dws-input3">
+                                                     <a class = "dws-submit2" href = "file:///C:/Users/Owner/Desktop/Курсовая%20Малахов/Workshift.html" type = "Hiring staff" name = "Hiring staff" value = "Hiring staff">Workshift</a>
+                                                     </div>-->
+
+      {% endblock %}

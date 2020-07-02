@@ -1,0 +1,43 @@
+{% extends 'basics.html' %}
+
+    {% block style %}
+        <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Add_Staff2.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Trainer    {% endblock %}
+{% block body %}
+                         <h1>Список сотрудников</h1>
+                                                            <table class = "table" border = "2">
+                                                                   <tr>
+                                                                          <th class = "text">Имя сотрудников</th>
+                                                                          <th class = "text">Фамилия сотрудников</th>
+                                                                          <th class = "text">Отчество сотрудников</th>
+                                                                          <th class = "text">Телефон сотрудников</th>
+
+                                                                       <th class = "text">Услуги сотрудников</th>
+                                                                       <th class = "text">Тип услуги</th>
+                                                                       <th class = "text">Должность сотрудников</th>
+                                                                   </tr>
+                                                                    {% for row in data %}
+                                                                       <tr>
+                                                                              <th class = "text">{{row[0]}}</th>
+                                                                              <th class = "text">{{row[1]}}</th>
+                                                                              <th class = "text">{{row[2]}}</th>
+                                                                              <th class = "text">{{row[3]}}</th>
+                                                                              <th class = "text">{{"\n".join(row[4])}}</th>
+                                                                              <th class = "text">{{"\n".join(row[5])}}</th>
+                                                                              <th class = "text">{{row[6]}}</th>
+                                                                       </tr>
+                                                                    {% endfor %}
+                                                            </table>
+                                                            <br />
+                                                            <br />
+                                                            <a class = "restore" href = "/director/{{username}}">Назад</a>
+                                                            <!--<button class = "dws-submit3" alt = "" type = "submit">Расписание на следующую неделю</button>-->
+                                                     <!--<a class = "dws-submit2" href = "file:///C:/Users/Owner/Desktop/Курсовая%20Малахов/Training.html" type = "Money" name = "Money" value = "Money">Training</a>
+                                                     </div>
+                                                     <div class = "dws-input3">
+                                                     <a class = "dws-submit2" href = "file:///C:/Users/Owner/Desktop/Курсовая%20Малахов/Workshift.html" type = "Hiring staff" name = "Hiring staff" value = "Hiring staff">Workshift</a>
+                                                     </div>-->
+
+      {% endblock %}

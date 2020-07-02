@@ -1,0 +1,61 @@
+{% extends 'basics.html' %}
+    {% block style %}
+        <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Director.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Director{% endblock %}
+{% block body %}
+                     <div class = "intro">
+                     <h1> Директор </h1>
+                     </div>
+                                   <div class = "intro2">
+                                          <div class="section_header">
+                                                 <h3 class = "section_suptitle">Добро пожаловать в личный кабинет</h3>
+                                          </div>
+                                          <div class = "container">   
+                                                 
+                                          <img src = "{{ url_for('static',filename='imgs/moya.jpg') }}">
+                                          <form method="GET">
+                                              <div class = "dws-input">
+                                              <input type = "name" name = "name" placeholder = {{ dirstaff.name_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "surname" name = "surname" placeholder = {{ dirstaff.surname_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "patronomyc" name = "patronomyc" placeholder = {{ dirstaff.patronomyc_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "telephone" name = "telephone" placeholder = {{ dirstaff.mobile_telephone_staff }}>
+                                              </div>
+                                              <br />
+                                              <a class = "dws-submit" href = "/logout" type = "back" name = "back" value = "Back">Выйти</a>
+                                          </form>
+                                          </div>
+                                          <div class = "container2"> 
+                                                 <div class="header_menu">
+                                                        <h4>Меню</h4>
+                                                 </div> 
+                                                 <form>
+                                                     <div class = "dws-input2">
+                                                     <a class = "dws-submit2" href = "/director/addstaff/{{username}}" type = "Money" name = "Money" value = "Hiring staff">Добавить сотрудника</a>
+                                                     </div>
+                                                     <div class = "dws-input3">
+                                                     <a class = "dws-submit2" href = "/director/delete/{{username}}" type = "Hiring staff" name = "Hiring staff" value = "Delete staff">Удалить сотрудника</a>
+                                                     </div>
+                                                     <div class = "dws-input4">
+                                                     <a class = "dws-submit2" href = "/director/list_services/{{username}}" type = "Delete staff" name = "Delete staff" value = "See services">Доступные услуги</a>
+                                                     </div>
+                                                     <div class = "dws-input5">
+                                                     <a class = "dws-submit2" href = "/director/addservice/{{username}}" type = "Statistics" name = "Statistics" value = "Statistics">Добавить услугу</a>
+                                                     </div>
+                                                     <div class = "dws-input2">
+                                                     <a class = "dws-submit2" href = "/director/deleteservice/{{username}}" type = "Statistics" name = "Statistics" value = "Statistics">Удалить услугу</a>
+                                                     </div>
+                                                     <div class = "dws-input3">
+                                                     <a class = "dws-submit2" href = "/director/statistics/{{username}}" type = "Statistics" name = "Statistics" value = "Statistics">Рабочая смена</a>
+                                                     </div>
+                                                 </form>
+                                             </div>
+                                   </div>
+    {% endblock %}

@@ -1,0 +1,203 @@
+{% extends 'basics.html' %}
+
+
+    {% block style %}
+    <link rel = "stylesheet" href = "{{ url_for('static',filename='css/FitnessClubSite.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Fitness Club    {% endblock %}
+{% block body %}
+<header class = "header">
+    <div class="container">
+          <div class = "header_inner">
+            <div class = "header_logo">
+               <a class = "acc" href = "/login">Account</a>
+            </div>
+          <!--<nav class = "nav">
+        <a class = "nav_link active" href = "#">О клубе</a>
+        <a class = "nav_link" href = "#">Услуги</a>
+        <a class = "nav_link" href = "#">Блог</a>
+        <a class = "nav_link" href = "#">Работа</a>
+        <a class = "nav_link" href = "#">Контакты</a>
+         </nav>-->
+         </div>
+    </div>
+</header>
+<div class ="intro">
+      <div class ="container">
+          <div class="intro_inner">
+              <h2 class = "intro_supstitle">Your body - your power!</h2>
+              <h1 class = "intro_title">Welcome to Fitness Club!</h1>
+              <!--<a class = "btn" href = "#">Подробнее</a>-->
+          </div>
+    <!--<div class = "slider">
+        <div class="container">
+           <div class="slider_inner">
+        <div class="slider_item active">
+            <span class = "slider_num">1</span>
+            <a class = "slider_link" href = "#">Тренировки</a>
+        </div>
+        <div class="slider_item">
+            <span class = "slider_num">2</span>
+            <a class = "slider_link" href = "#">Работа</a>
+        </div>
+        <div class="slider_item">
+            <span class = "slider_num">3</span>
+            <a class = "slider_link" href = "#">О клубе</a>
+        </div>
+        <div class="slider_item">
+            <span class = "slider_num">4</span>
+            <a class = "slider_link" href = "#">Контакты</a>
+        </div>
+            </div>
+        </div>
+    </div>-->
+        
+      </div>
+</div>
+<section class = "section">
+<div class = "container">
+
+    <div class="section_header">
+        <h3 class = "section_suptitle">Почему мы лучший выбор?</h3>
+        <h2 class = "section_title">История о нас</h2>
+        <div class = "section_text">
+            <p>
+                 Мы фитнес клуб, который работаем более 10 лет. Наш тренерский состав помог нашим клиентам стать лучше
+                 воспитать в себе самые лучшие качества, работать над собой и добиваться успехов</p>
+        </div>
+    </div>
+
+
+    <div class="about">
+        <div class="about_item">
+              <div class="about_img">
+                  <img src = "{{ url_for('static',filename='imgs/photo1.jpg') }}" width ="380" height = "250" alt="">
+              </div>
+              <div class = "about_text">
+                  Невероятный тренерский состав
+              </div>
+        </div>
+        <div class="about_item">
+            <div class="about_img">
+                <img src = "{{ url_for('static',filename='imgs/photo2.jpg') }}" width ="380" height = "250" alt="">
+            </div>
+            <div class = "about_text">
+                   Интенсивные тренировки
+            </div>
+        </div>
+        <div class="about_item">
+            <div class="about_img">
+                <img src = "{{ url_for('static',filename='imgs/photo3.jpg') }}" width = "380" height = "250" alt="">
+            </div>
+            <div class = "about_text">
+                 Групповые тренировки
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!--<div class = "statistics">
+    <div class="container">
+            <div class="stat">
+
+            <div class="stat_item">
+            <div class="stat_count">50</div>
+            <div class="stat_text">Тренеров</div>
+            </div>
+
+            <div class="stat_item">
+                <div class="stat_count">15</div>
+                <div class="stat_text">Тренировочных залов</div>
+            </div>
+
+            <div class="stat_item">
+                <div class="stat_count">20</div>
+                <div class="stat_text">Видов тренировок</div>
+            </div>
+
+            <div class="stat_item">
+                <div class="stat_count">42</div>
+                <div class="stat_text">Видов тренажеров</div>
+            </div>
+
+            <div class="stat_item">
+                <div class="stat_count">1500</div>
+                <div class="stat_text">Количество клиентов</div>
+            </div>
+        </div>
+    </div>
+</div>
+               <section class="section">
+               <div class="container">
+                <div class="section_header">
+                    <h3 class = "section_suptitle">Главные преимущества</h3>
+                    <h2 class = "section_title">Нашего фитнес клуба</h2>
+                </div>
+                      <div class="services">
+                <div class="services_item">
+                    <img class = "services_icon" src = "{{ url_for('static',filename='imgs/image1.png') }}" width = "50" height = "50"  alt = "">
+                    <div class="services_title">Хорошое оборудование для работы с весом</div>
+                    <div class="services_text">Специальные тренажеры которые помогают увеличить мышечную массу</div>
+                </div>
+                <div class="services_item">
+                    <img class = "services_icon" src = "{{ url_for('static',filename='imgs/image2.png') }}" width = "55" height = "55"  alt = "">
+                    <div class="services_title">Кардио тренажеры</div>
+                    <div class="services_text">Для тренировок связанных с похудением</div>
+                </div>
+                <div class="services_item">
+                    <img class = "services_icon" src = "{{ url_for('static',filename='imgs/image3.png') }}" width = "50" height = "50"  alt = "">
+                    <div class="services_title">Харизматичные тренера</div>
+                    <div class="services_text">
+                        Вам никогда не будет скучно</div>
+                </div>
+                </div>
+
+               <hr>
+               <div class="services">
+                <div class="services_item">
+                    <img class = "services_icon" src = "{{ url_for('static',filename='imgs/image4.png') }}" width = "50" height = "50"  alt = "">
+                    <div class="services_title">Бассейн</div>
+                    <div class="services_text">Теплый и большой бассейн </div>
+                </div>
+                <div class="services_item">
+                    <img class = "services_icon" src = "{{ url_for('static',filename='imgs/image5.png') }}" width = "50" height = "50"  alt = "">
+                    <div class="services_title">Групповые тренировки</div>
+                    <div class="services_text">
+                        Интересные и необычные упражнения в быстром темпе</div>
+                </div>
+                <div class="services_item">
+                    <img class = "services_icon" src = "{{ url_for('static',filename='imgs/image6.png') }}" width = "50" height = "50"  alt = "">
+                    <div class="services_title">Лучшие специалисты</div>
+                    <div class="services_text">
+                        Ребята с высшим медицинским образованием</div>
+                </div>
+            </div>
+        </div>
+    </section>
+                     <section class="section section--devices">
+                     <div class="container">
+                <div class="section_header">
+                <h3 class = "section_suptitle">Для всех девайсов</h3>
+                <h2 class = "section_title">Уникальный дизайн</h2>
+                     </div>
+                     <div class = "devices">
+                     <img class = "devices_item" src = "{{ url_for('static',filename='imgs/12.jpg') }}" width = "600" height="540" alt = "">
+                     <img class = "devices_item devices_item--iphone" src = "{{ url_for('static',filename='imgs/fotka2.png') }}" width = "300" height="550" alt = "">
+                     </div>
+                     </div>
+                     </section>
+
+                     <footer class = "footer">
+                         <div class="container">
+                             <div class="footer_inner">
+                                 <div class="footer_end">
+                                     <div class="footer_logo">
+                                         Fitness Club Site
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </footer>-->
+
+    {% endblock %}

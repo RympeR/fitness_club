@@ -1,0 +1,45 @@
+{% extends 'basics.html' %}
+
+
+    {% block style %}
+    <link rel = "stylesheet" href = "{{ url_for('static',filename='css/NewClient.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}New Client    {% endblock %}
+{% block body %}
+    <div class = "intro">
+        <h1>Записать клиента на абонемент</h1>                                                                                                                                                                                                                                                                                                            </Записать></h1>
+<div class = "container">
+    <img src = "{{ url_for('static',filename='imgs/client.jpg') }}">
+    <form>
+        <div class = "dws-input"><!--posle click add num card i ubrat tut-->
+        <input type = "text" name = "card" placeholder = "Введите номер карты:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "name" placeholder = "Введите имя:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "surname" placeholder = "Введите фамилию:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "patronomyc" placeholder = "Введите отчество:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "name" placeholder = "Название услуги:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "name" placeholder = "Номер карты:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "name" placeholder = "Телефон:">
+        </div>
+        <br />
+        <br />
+        <a class = "dws-submit2" href = "" type = "submit" name = "submit" value = "Report">Записать клиента</a>
+        <br />
+        <br />
+        <br />
+        <a class = "restore" href = "/admin">Назад</a>
+    </form>
+</div>
+</div>    {% endblock %}

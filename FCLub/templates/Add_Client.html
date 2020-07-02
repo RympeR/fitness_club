@@ -1,0 +1,36 @@
+{% extends 'basics.html' %}
+
+
+    {% block style %}
+    <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Add_Client.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}Add_client    {% endblock %}
+{% block body %}
+    <div class = "intro">
+        <h1>Добавить клиента</h1>
+<div class = "container">
+    <img src = "{{ url_for('static',filename='imgs/Service.jpg') }}">
+    <form method="post">
+        <div class = "dws-input">
+        <input type = "text" name = "name" placeholder = "Имя клиента:">
+        </div>
+         <div class = "dws-input">
+        <input type = "text" name = "surname" placeholder = "Фамилия клиента:">
+        </div>
+         <div class = "dws-input">
+        <input type = "text" name = "lastname" placeholder = "Отчество клиента:">
+        </div>
+        <div class = "dws-input">
+        <input type = "text" name = "telephone" placeholder = "Номер телефона:">
+        </div>
+        <br />
+        <br />
+        <button class = "dws-submit2" type = "submit" name = "submit" value = "Report">Обновить список услуг</button>
+        <br />
+        <br />
+        <br />
+        <a class = "restore" href = "/admin/{{username}}">Назад</a>
+    </form>
+</div>
+</div>    {% endblock %}

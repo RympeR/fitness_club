@@ -1,0 +1,27 @@
+{% extends 'basics.html' %}
+
+
+    {% block style %}
+    <link rel = "stylesheet" href = "{{ url_for('static',filename='css/About_Client.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    {% endblock %}
+{% block title %}New Client    {% endblock %}
+{% block body %}
+    <div class = "intro">
+        <h1>Записать клиента на абонемент</h1>                                                                                                                                                                                                                                                                                                            </Записать></h1>
+<div class = "container">
+    <img src = "{{ url_for('static',filename='imgs/client.jpg') }}">
+    <form>
+        <div class = "dws-input"><!--posle click add num card i ubrat tut-->
+        <input type = "text" name = "card" placeholder = "Введите номер телефона:">
+        </div>
+        <br />
+        <br />
+        <a class = "dws-submit2" href = "/admin/infoaboutclient" type = "submit" name = "submit" value = "Report">Получить данные о клиенте</a>
+        <br />
+        <br />
+        <br />
+        <a class = "restore" href = "/admin">Назад</a>
+    </form>
+</div>
+</div>    {% endblock %}

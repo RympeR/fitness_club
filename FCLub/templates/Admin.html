@@ -1,0 +1,60 @@
+{% extends 'basics.html' %}
+
+    {% block style %}
+        <link rel = "stylesheet" href = "{{ url_for('static',filename='css/Admin.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+          {% endblock %}
+{% block title %}Admin{% endblock %}
+{% block body %}
+                     <div class = "intro">
+                     <h1> Админ </h1>
+                     </div>
+                                   <div class = "intro2">
+                                          <div class="section_header">
+                                                 <h3 class = "section_suptitle">Это ваша персональная страница. Хотите внести какие то изменения?</h3>
+                                          </div>
+                                          <div class = "container">   
+                                                 
+                                          <img src =  "{{ url_for('static',filename='imgs/admin.jpg') }}">
+                                          <form>
+                                             <div class = "dws-input">
+                                              <input type = "name" disabled name = "name" placeholder = {{ dirstaff.name_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "surname" disabled name = "surname" placeholder = {{ dirstaff.surname_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "patronomyc" disabled name = "patronomyc" placeholder = {{ dirstaff.patronomyc_staff }}>
+                                              </div>
+                                              <div class = "dws-input">
+                                              <input type = "telephone" disabled name = "telephone" placeholder = {{ dirstaff.mobile_telephone_staff }}>
+                                              </div>
+                                              <br />
+                                              <a class = "dws-submit" href = "/logout" type = "back" name = "back" value = "Back">Назад</a>
+                                          </form>
+                                          </div>
+                                          <div class = "container2"> 
+                                                 <div class="header_menu">
+                                                        <h4>Меню</h4>
+                                                 </div> 
+                                                 <form>
+                                                     <div class = "dws-input2">
+                                                     <a class = "dws-submit2" href = "/admin/newclient/{{username}}" type = "Money" name = "Money" value = "Money">Записать клиента</a>
+                                                     </div>
+                                                      <div class = "dws-input2">
+                                                     <a class = "dws-submit2" href = "/admin/aboutclient/{{username}}" type = "Money" name = "Money" value = "Money">Получить данные о клиенте</a>
+                                                     </div>
+                                                     <div class = "dws-input2">
+                                                     <a class = "dws-submit2" href = "/admin/addclient/{{username}}" type = "Money" name = "Money" value = "Money">Добавить клиента</a>
+                                                     </div>
+                                                     <div class = "dws-input2">
+                                                     <a class = "dws-submit2" href = "/admin/visit/{{username}}" type = "Money" name = "Money" value = "Money">Посещение клиента</a>
+                                                     </div>
+                                                      <div class = "dws-input2">
+                                                     <a class = "dws-submit2" href = "/admin/end/{{username}}" type = "Money" name = "Money" value = "Money">Закрыть абонемент</a>
+                                                     </div>
+                                                 </form>
+                                             </div>
+                                   </div>
+
+{% endblock %}
