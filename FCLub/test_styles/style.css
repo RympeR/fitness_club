@@ -1,0 +1,64 @@
+* {
+	background-color: rgb(100, 100, 100);
+	font-family: "Arial";
+	font-size: 18px;
+}
+body{
+	counter-reset: mycounter;
+}
+:target{
+	color:red;
+}
+p {
+	background-color: rgba(228, 231, 23, 0.699);
+	line-height: 150%;
+	letter-spacing: normal;
+	word-spacing: 1mm;
+	text-indent: 10mm;
+	text-align: justify;
+}
+p::first-letter{
+	border-radius: 0.6cm;
+	border-style: solid;
+	border-color: blue;
+	font-weight: bold;
+	font-size: 150%;
+	color:silver;
+	font-style: oblique;
+}
+p::first-line{
+	font-weight: bold;
+	font-variant: small-caps;
+}
+::selection{
+	background-color: green;
+}
+p:empty{
+	display: none;
+}
+p:first-child{
+	font-size: larger;
+}
+p::before{
+	counter-increment: mycounter 2;
+	content: "abz " counter(mycounter) ";" open-quote;
+}
+p::after{
+	content: close-quote;
+}
+.test2{
+	background-color: #FFFFFF;
+}
+a.first_link{
+	font-weight: 700;
+}
+div.test>ul li, div.test ul li{
+	text-align: center;
+	background-color: rgb(192, 211, 210);
+}
+ul.list+span{
+	font-style: italic;
+}
+div.test1~div.test3 *{
+	font-size: 20px;
+}
